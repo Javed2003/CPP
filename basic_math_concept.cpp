@@ -4,9 +4,14 @@ using namespace std;
 class math
 {
 private:
-    int number = 3456;
+    int number;
 
 public:
+    void get_number()
+    {
+        cout << "enter the number ";
+        cin >> number;
+    }
     void digit_cnt() // count the number of digits
     {
         int count = 0;
@@ -15,7 +20,7 @@ public:
             number = number / 10;
             count = count + 1;
         }
-        cout << "Total number of count = " << count << endl;
+        cout << "Total digit in number is = " << count << endl;
     }
 
     void revers_num()

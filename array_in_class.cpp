@@ -3,7 +3,7 @@ using namespace std;
 
 const int s = 10; // initilization of an integer type variable which const means its value is not changeble
 
-class array     //declare a class with name array
+class array // declare a class with name array
 {
     int a[s];       // by default private
     void getdata(); // declaration of private member function
@@ -22,6 +22,15 @@ void array::getdata() // definition of private member function
     }
 }
 
+void array::invers()
+{
+    cout << "array elments in invers : " << endl;
+    for (int i = s - 1; i >= 0; i--)
+    {
+        cout << a[i] << "   ";
+    }
+}
+
 void array::display() // definition of public member function
 {
     getdata(); // call the private member function without objects
@@ -29,13 +38,10 @@ void array::display() // definition of public member function
     cout << "ELEMENTS IN ARRAY IS : " << endl;
     for (int i = 0; i < s; i++)
     {
-        cout << a[i] << endl;
+        cout << a[i] << "    ";
     }
-}
-
-void array::invers()
-{
-    cout<<"array elments in invers : ";
+    cout << endl;
+    invers();
 }
 
 int main()

@@ -35,7 +35,7 @@ public:
         // illustrate the iterators in vector
         vector<int> g1;
 
-        for (int i = 1; i <= 5; i++)
+        for (int i = 6; i <= 22; i++)
             g1.push_back(i);
 
         cout << "output of begin and end : ";
@@ -205,7 +205,7 @@ public:
         // after inserting print  first element
         cout << "after inserting first element in list : " << l.front() << "\n";
 
-        // delete an element from stating position
+        // delete an element from starting position
         l.pop_front();
 
         // after deleting first element
@@ -238,7 +238,7 @@ public:
         cout << "all elements in de are : " << de.size() << "\n";
 
         // maximum size of deque de
-        cout << "maximum size of dequer de : " << de.max_size() << "\n";
+        cout << "maximum size of deque : " << de.max_size() << "\n";
 
         // remove the first element
         de.pop_front();
@@ -251,7 +251,7 @@ public:
     // all opertion of stack
     void showst()
     {
-        // creat an stsck
+        // creat an stack
         stack<int> st;
         st.push(21);
         st.push(22);
