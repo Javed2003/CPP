@@ -4,6 +4,7 @@ using namespace std;
 class stl
 {
 public:
+    /*------------------------ unoredered set CONTAINER IN STL C++ ------------------------------*/
     void un_set()
     {
         // declairation of unordered_set container
@@ -51,6 +52,7 @@ public:
             cout << "container is not empty" << endl;
     }
 
+    /*------------------------------- vector CONTAINER IN STL C++ -------------------------------------*/
     void Vector_f()
     {
         // declaration of vector
@@ -83,7 +85,18 @@ public:
         v1.insert(v1.end(), 66);
         cout << "66 is inserted in vector" << endl;
 
-        // show aal elements after insrting new elements in vector
+        // show the front element of vector
+        cout << "Front element of vector is: " << v1.front() << endl;
+
+        // show last element of vector
+        cout << "Last element of vector is: " << v1.back() << endl;
+
+        // delete last element of vector
+        v1.pop_back();
+        cout << endl
+             << "last elemet of vector is deleted!" << endl;
+
+        // show elements after deleting last element of vector
         cout << endl
              << "All elements of vector is: ";
         for (auto it = v1.begin(); it != v1.end(); it++)
@@ -91,10 +104,9 @@ public:
             cout << *it << " ";
         }
 
-        // delete last element of vector
-        v1.pop_back();
-        cout << endl
-             << "last elemet of vector is deleted!" << endl;
+        // delete all elments of vector
+        v1.clear();
+        cout << "\nAfter deleting all elements from the vector!" << endl;
 
         // check vector empty or not
         cout << "vector is empty? ";
@@ -103,10 +115,58 @@ public:
         else
             cout << "No!" << endl;
     }
+
+    /*------------------------------- set CONTAINER IN STL C++ -----------------------------------------*/
+    void Set_f()
+    {
+        // declaration of set container in STL c++
+        set<string> s;
+
+        // insert name
+        s.insert("JAVED");
+        s.insert("BABU");
+        s.insert("PARVEJ");
+        s.insert("DEEPAK");
+        s.insert("LEO");
+
+        // show all names
+        cout << "All names are stored in set: " << endl;
+        for (auto it = s.begin(); it != s.end(); it++)
+        {
+            cout << *it << "    ";
+        }
+
+        // delete name BABU from the set
+        s.erase("BABU");
+
+        // AFTER DELETING show all names
+        cout << "\n\nAfter deleting BABU present names in set: " << endl;
+        for (auto it = s.begin(); it != s.end(); it++)
+        {
+            cout << *it << "    ";
+        }
+
+        // search name that is present in set or not
+        cout << "\nBABU is present in set? " << s.count("BABU") << endl;
+
+        // size of set
+        cout << "size of container set is: " << s.size() << endl;
+
+        // delete all names from the set container
+        s.clear();
+
+        // check that cotainer is empty or not
+        cout << "container is empty or not? ";
+        if (s.empty() == true)
+            cout << "Yes empty" << endl;
+        else
+            cout << "Not empty" << endl;
+    }
 };
 int main()
 {
     stl ob;
     // ob.un_set();
     // ob.Vector_f();
+    // ob.Set_f();
 }
